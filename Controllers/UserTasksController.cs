@@ -204,7 +204,7 @@ namespace TaskTrackerApi.Controllers
 
 			task.Title = request.Title;
 			task.Description = request.Description;
-			task.UpdatedAt = DateTime.Now;
+			task.UpdatedAt = DateTime.UtcNow;
 
 			await dbContext.SaveChangesAsync();
 
